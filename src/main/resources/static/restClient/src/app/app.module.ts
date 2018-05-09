@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 
+import { UserService } from "./shared-service/user.service";
+import { HttpModule } from "@angular/http";
+
 const appRoutes: Routes = [
   {path: '', component: ListUserComponent},
   {path: 'op', component: UserFormComponent}
@@ -20,9 +23,10 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
