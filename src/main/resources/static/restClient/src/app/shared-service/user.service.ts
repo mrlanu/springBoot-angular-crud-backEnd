@@ -27,7 +27,7 @@ export class UserService {
   }
 
   deleteUser(id: number) {
-    return this._http.delete(this.baseUrl + '/user' + id, this.options).map((response: Response) => response.json())
+    return this._http.delete(this.baseUrl + '/user/' + id, this.options).map((response: Response) => response.json())
       .catch(this.errorHandler);
   }
 

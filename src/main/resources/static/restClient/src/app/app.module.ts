@@ -9,6 +9,7 @@ import { UserFormComponent } from './components/user-form/user-form.component';
 
 import { UserService } from "./shared-service/user.service";
 import { HttpModule } from "@angular/http";
+import {FormsModule} from "@angular/forms";
 
 const appRoutes: Routes = [
   {path: '', component: ListUserComponent},
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],

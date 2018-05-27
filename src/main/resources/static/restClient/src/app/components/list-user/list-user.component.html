@@ -12,8 +12,8 @@
       <td>{{ user.firstName }}</td>
       <td>{{ user.lastName }}</td>
       <td>
-        <button class="btn btn-danger">Delete</button>
-        <button class="btn btn-primary">Edit</button>
+        <button class="btn btn-danger" (click)="onDeleteUser(user)">Delete</button>
+        <button class="btn btn-primary" routerLink="op">Edit</button>
       </td>
     </tr>
   </tbody>

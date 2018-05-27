@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {NgForm} from "@angular/forms";
+import {UserService} from "../../shared-service/user.service";
 
 @Component({
   selector: 'app-user-form',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserFormComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('f') submitedForm: NgForm;
+
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
